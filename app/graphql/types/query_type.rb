@@ -6,12 +6,15 @@ module Types
 
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
+    field :items, [Types::ItemType], null: false, description: 'Return a list of items'
+    field :artists, [Types::ArtistType], null: false, description: 'Return a list of artist'
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    def items
+      Item.all
+    end
+
+    def artists
+      Artist.all
     end
   end
 end
