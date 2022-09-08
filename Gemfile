@@ -50,6 +50,7 @@ gem 'bootsnap', require: false
 
 gem 'dotenv-rails'
 
+gem 'graphiql-rails', group: :development
 gem 'graphql', '~> 2.0'
 
 group :development, :test do
