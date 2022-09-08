@@ -8,6 +8,9 @@ module Types
     # They will be entry points for queries on your schema.
     field :items, [Types::ItemType], null: false, description: 'Return a list of items'
     field :artists, [Types::ArtistType], null: false, description: 'Return a list of artist'
+    field :artist, Types::ArtistType, null: false do
+      argument :id, ID, required: true
+    end
 
     def items
       Item.all
@@ -15,6 +18,10 @@ module Types
 
     def artists
       Artist.all
+    end
+
+    def artist(id:)
+      Artist.find_by(id: id)
     end
   end
 end

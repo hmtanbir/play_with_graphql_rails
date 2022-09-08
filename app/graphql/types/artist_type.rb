@@ -3,6 +3,7 @@
 module Types
   # graphql type for artist
   class ArtistType < Types::BaseObject
+    description 'An artist details'
     field :id, ID, null: false, description: 'Return ID of artist'
     field :first_name, String
     field :last_name, String
