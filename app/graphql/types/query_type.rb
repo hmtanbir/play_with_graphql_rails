@@ -35,3 +35,33 @@ module Types
     end
   end
 end
+
+# Examples:
+# query Artists {
+#   artists {
+#     firstName
+#     lastName
+#     fullName
+#   }
+# }
+#
+# query Artist($ID: ID!) {
+#   artist(id: $ID) {
+#     firstName
+#     lastName
+#     fullName
+#   }
+# }
+#
+# query Items {
+#   item(id: 1) {
+#     id
+#     title
+#   }
+# }
+
+# variables
+# {
+#   "ID": 1
+# }
+#
